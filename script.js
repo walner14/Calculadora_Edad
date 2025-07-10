@@ -130,7 +130,7 @@ function getGenerationInfo(year) {
     };
   } else if (year >= 1946) {
     return {
-      name: "[1946-1964] -Generación Baby Boomers",
+      name: "[1946-1964] - Baby Boomers ",
       description: "Optimistas y trabajadores.",
       details: "Nacieron tras la guerra.Disciplinados y comprometidos.",
       video: "https://www.youtube.com/embed/7QejZ6Qg7Ww",
@@ -146,4 +146,6 @@ function getGenerationInfo(year) {
     };
   }
 }
+
+
 
