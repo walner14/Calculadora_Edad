@@ -1,0 +1,273 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #e8f5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 10px;
+}
+
+.age-column,
+.game-column {
+  flex: 1 1 350px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Juego de adivinanza */
+#guess-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#guess-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #51bba8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#guess-btn:hover {
+  background-color: #459e8f;
+}
+
+#guess-message {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive para columnas iniciales */
+@media (max-width: 768px) {
+  .initial-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .age-column,
+  .game-column {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+
+/* FORMULARIO INICIAL */
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+input[type="date"],
+button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+input[type="date"] {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+button {
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4d4d;
+}
+
+.output-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.output-wrapper div {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #141414;
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* CONTENEDOR POST-CÁLCULO EN DOS COLUMNAS */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;          /* ganamos un poco más de anchura */
+  max-width: 700;    /* bajamos de 1200px a 1000px */
+  background-color: #ffffff;
+  padding: 15px;        /* reducimos de 30px a 20px */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  gap: 10px;            /* reducimos el espacio entre columnas */
+}
+
+/* PANEL IZQUIERDO */
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;            /* menos separación entre elementos */
+}
+
+/* PANEL DERECHO */
+.right-panel {
+  flex: 1;              /* igualamos proporciones */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;            /* menos separación */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 10px;        /* reducimos padding de 20px a 15px */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* OCULTAR AL INICIO */
+
+.hidden {
+  display: none !important;
+}
+
+.hidden-panel {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+.right-panel.active {
+  opacity: 1;
+  pointer-events: auto;
+  display: flex;
+}
+
+/* Video */
+
+#video-wrapper iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.back-btn {
+  display: block;                /* Lo convierte en bloque para centrar */
+  margin: 20px auto 0 auto;      /* Margen arriba de 20px y centrado */
+  padding: 12px 24px;
+  background-color: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  max-width: 250px;              /* Limita el ancho para mejor estética */
+}
+.back-btn:hover {
+  background-color: #ff4d4d;
+}
+
+
+/* Imagen */
+
+.generation-img {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .output-wrapper {
+    flex-direction: column;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+  }
+
+  button, input[type="date"] {
+    width: 100%;
+  }
+}
+
+

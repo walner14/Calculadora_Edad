@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculadora de Edad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FORMULARIO CENTRADO AL INICIO -->
+
+  <div class="form-container" id="form-container">
+    <div class="input-wrapper">
+      <input type="date" id="date-input" placeholder="dd/mm/aaaa" />
+      <button id="calc-age-btn">Calcular</button>
+    </div>
+
+    <div class="output-wrapper">
+      <div><span id="days">-</span><p>Días</p></div>
+      <div><span id="months">-</span><p>Meses</p></div>
+      <div><span id="years">-</span><p>Años</p></div>
+    </div>
+  </div>
+
+  <!-- RESULTADO POST-CÁLCULO EN DOS COLUMNAS -->
+
+  <div class="container hidden" id="result-container">
+
+    <!-- IZQUIERDA -->
+
+    <div class="left-panel">
+      <div class="input-wrapper">
+      </div>
+
+      <div class="output-wrapper">
+        <div><span id="res-days">-</span><p>Días</p></div>
+        <div><span id="res-months">-</span><p>Meses</p></div>
+        <div><span id="res-years">-</span><p>Años</p></div>
+      </div>
+
+      <h3 id="generation-name">-</h3>
+      <p id="generation-description">-</p>
+      <img id="generation-image" src="" alt="Imagen Generación" class="generation-img" />
+    </div>
+
+    <!-- DERECHA -->
+
+    <div id="right-panel" class="right-panel hidden-panel">
+      <p id="generation-details">Detalles de la generación...</p>
+      <div id="video-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
