@@ -120,7 +120,6 @@ function getGenerationInfo(year) {
     };
   } else if (year >= 1981) {
     return {
-      name:"Generación Y (Millennials)",
       video: "https://www.youtube.com/embed/B0CeknRyceY",
       image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752169950/Generacion_Y_kt6wty.png",
     };
@@ -131,7 +130,7 @@ function getGenerationInfo(year) {
     };
   } else if (year >= 1946) {
     return {
-      name: "[1946-1964] - ",
+      name: "[1946-1964] -Generación Baby Boomers",
       description: "Optimistas y trabajadores.",
       details: "Nacieron tras la guerra.Disciplinados y comprometidos.",
       video: "https://www.youtube.com/embed/7QejZ6Qg7Ww",
