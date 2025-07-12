@@ -116,7 +116,7 @@ function getGenerationInfo(year) {
       description:"Nativos digitales.Conectados y creativos.",
       details:"Valoran la diversidad y la autoeducación.",
       video: "https://www.youtube.com/embed/g-Vcm28ckEg",
-      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752094922/Generacion_Z_dqgjy8.png",
+      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752169950/Generacion_Y_kt6wty.png",
     };
   } else if (year >= 1981) {
     return {
