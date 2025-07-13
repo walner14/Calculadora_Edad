@@ -108,7 +108,7 @@ function getGenerationInfo(year) {
       description:"Nacidos en la era de la inteligencia artificial.",
       details:"Rodeados de IA, tablets y redes sociales desde pequeños.",
       video: "https://www.youtube.com/embed/6HcgjwRIx2I",
-      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752094888/Generacion_Alpha_rrbyci.png",
+      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752447897/Generacion_Alpha_wr4jyv.png",
     };
   } else if (year >= 1997) {
     return {
@@ -116,7 +116,7 @@ function getGenerationInfo(year) {
       description:"Nativos digitales.Conectados y creativos.",
       details:"Valoran la diversidad y la autoeducación.",
       video: "https://www.youtube.com/embed/g-Vcm28ckEg",
-      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752169950/Generacion_Y_kt6wty.png",
+      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752448037/Generacion_Z_bbmvic.png",
     };
   } else if (year >= 1981) {
     return {
@@ -134,7 +134,7 @@ function getGenerationInfo(year) {
       description: "Optimistas y trabajadores.",
       details: "Nacieron tras la guerra.Disciplinados y comprometidos.",
       video: "https://www.youtube.com/embed/7QejZ6Qg7Ww",
-      image: "img/boomers.png",
+      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752447950/Generacion_Baby_Boomers_j6s4jt.png",
     };
   } else {
     return {
@@ -142,7 +142,7 @@ function getGenerationInfo(year) {
       description:"Prudentes, trabajadores y resilientes.",
       details:"Crecieron en la Gran Depresión y la Segunda Guerra Mundial.",
       video: "https://www.youtube.com/embed/9icvisV4PaU",
-      image: "img/silenciosa.png",
+      image: "https://res.cloudinary.com/dfd8iteps/image/upload/v1752448285/Generacion_Silenciosa_e4qoex.png",
     };
   }
 }
