@@ -1,4 +1,6 @@
-/* Reset general */
+/* ====================================
+          🪼 RESET GENERAL
+======================================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,49 +17,9 @@ body {
   padding: 40px 10px;
 }
 
-.age-column,
-.game-column {
-  flex: 1 1 350px;
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Juego de adivinanza */
-#guess-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#guess-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #51bba8;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#guess-btn:hover {
-  background-color: #459e8f;
-}
-
-#guess-message {
-  margin-top: 10px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Responsive para columnas iniciales */
+/* =============================================
+     📱 RESPONSIVE GENERAL
+================================================= */
 @media (max-width: 768px) {
   .initial-section {
     flex-direction: column;
@@ -65,16 +27,33 @@ body {
   }
 
   .age-column,
-  .game-column {
+  .game-column,
+  .final-section > div {
     width: 100%;
     max-width: 500px;
   }
+
+  .container,
+  .output-wrapper,
+  .input-wrapper,
+  .final-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  button,
+  input[type="date"] {
+    width: 100%;
+  }
+
+  .generation-img {
+    max-height: 200px;
+  }
 }
 
-
-
-/* FORMULARIO INICIAL */
-
+/* ===========================================
+        📶 FORMULARIO DE ENTRADA DE FECHA
+============================================== */
 .form-container {
   width: 100%;
   max-width: 500px;
@@ -121,6 +100,9 @@ button:hover {
   background-color: #ff4d4d;
 }
 
+/* ======================================
+      🧳 CONTENEDOR DE RESULTADOS
+========================================= */
 .output-wrapper {
   display: flex;
   justify-content: space-between;
@@ -149,52 +131,57 @@ p {
   color: #555;
 }
 
-/* CONTENEDOR POST-CÁLCULO EN DOS COLUMNAS */
-
+/* ==========================================
+       🎯 POST-CÁLCULO EN DOS COLUMNAS
+============================================= */
 .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 95%;          /* ganamos un poco más de anchura */
-  max-width: 700;    /* bajamos de 1200px a 1000px */
-  background-color: #ffffff;
-  padding: 15px;        /* reducimos de 30px a 20px */
+  width: 95%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  gap: 10px;            /* reducimos el espacio entre columnas */
+  gap: 10px;
 }
 
-/* PANEL IZQUIERDO */
 .left-panel {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;            /* menos separación entre elementos */
+  gap: 10px;
 }
 
-/* PANEL DERECHO */
 .right-panel {
-  flex: 1;              /* igualamos proporciones */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;            /* menos separación */
+  align-items: center;
   background-color: #f9f9f9;
   border-radius: 12px;
-  padding: 10px;        /* reducimos padding de 20px a 15px */
+  padding: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  text-align: center;
 }
 
-
-/* OCULTAR AL INICIO */
-
-.hidden {
-  display: none !important;
+/* Ajuste para juntar imagen, detalles y secciones finales */
+#generation-image,
+#generation-details,
+#final-section,
+#share-section {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
+/* ===========================================
+        🙈 OCULTAR SECCIONES AL INICIO
+============================================== */
+.hidden,
 .hidden-panel {
-  opacity: 0;
-  pointer-events: none;
-  display: none;
+  display: none !important;
 }
 
 .right-panel.active {
@@ -203,21 +190,24 @@ p {
   display: flex;
 }
 
-/* Video */
-
+/* =====================================
+         🎥 VIDEO EMBEBIDO
+======================================== */
 #video-wrapper iframe {
   width: 100%;
   height: 350px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   display: block;
 }
 
+/* ======================================
+            🔙 BOTÓN VOLVER
+========================================= */
 .back-btn {
-  display: block;                /* Lo convierte en bloque para centrar */
-  margin: 20px auto 0 auto;      /* Margen arriba de 20px y centrado */
+  display: block;
+  margin: 20px auto 0 auto;
   padding: 12px 24px;
   background-color: #ff6b6b;
   color: white;
@@ -227,47 +217,219 @@ p {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
-  max-width: 250px;              /* Limita el ancho para mejor estética */
+  max-width: 250px;
 }
+
 .back-btn:hover {
   background-color: #ff4d4d;
 }
 
-
-/* Imagen */
-
 .generation-img {
   width: 100%;
-  max-width: 500px;
-  height: 250px;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
   border-radius: 12px;
+}
+
+
+/* =============================================
+      📢 SECCIÓN FINAL: COMPARTIR Y CONTACTO
+================================================= */
+.final-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 1100px;
+  background-color: white;
+  text-align: center;
+}
+
+.final-section > div {
+  flex: 1 1 45%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px; /* espacio abajo opcional */
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.social-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #51bba8;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-buttons a i {
+  font-size: 18px;
+}
+
+.social-buttons a:hover {
+  background-color: #459e8f;
+  transform: translateY(-2px);
+}
+
+
+.final-section form input,
+.final-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.final-section form button {
   margin-top: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #51bba8;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-
-
-
-
-/* Responsive */
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .output-wrapper {
-    flex-direction: column;
-  }
-
-  .input-wrapper {
-    flex-direction: column;
-  }
-
-  button, input[type="date"] {
-    width: 100%;
-  }
+.final-section form button:hover {
+  background-color: #3a9e8d;
 }
 
+/* ==================================
+   📬 FORMULARIO DE CONTACTO
+===================================== */
+#contact-section {
+  margin-top: 60px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9f9f9, #eef2f3);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  width: 95%;
+  transition: transform 0.3s ease;
+}
 
+#contact-section:hover {
+  transform: translateY(-3px);
+}
+
+#contact-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+#contact-section form label {
+  font-weight: 600;
+  color: #444;
+}
+
+#contact-section input,
+#contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 0.95em;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-section input:focus,
+#contact-section textarea:focus {
+  border-color: #51bba8;
+  box-shadow: 0 0 5px rgba(81, 187, 168, 0.3);
+  outline: none;
+}
+
+#contact-section button[type="submit"] {
+  padding: 12px 24px;
+  background-color: #51bba8;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact-section button[type="submit"]:hover {
+  background-color: #459e8f;
+  transform: scale(1.03);
+}
+
+/* =============================================
+   🔗 ESTILO PARA #share-section ADICIONAL
+================================================= */
+#share-section h2 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#share-section p {
+  color: #555;
+  font-size: 1em;
+}
+
+#share-section a img {
+  transition: transform 0.3s ease;
+  filter: grayscale(0.2);
+}
+
+#share-section a img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+/* =============================================
+   🎨 ANIMACIÓN FADE IN PARA SECCIONES
+================================================= */
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
