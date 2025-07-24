@@ -2,18 +2,29 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculadora de Edad</title>
+  <title>Calculadora de Edad | ¿Cuál es tu generación?</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- FORMULARIO CENTRADO AL INICIO -->
+  <!-- ============================
+       HERO SECTION (Título principal)
+       ============================ -->
+  <header class="hero" id="hero-text">
+    <h1>¿A qué generación perteneces?</h1>
+  </header>
 
+  <br />
+
+  <!-- ============================
+       FORMULARIO INICIAL (Entrada de fecha y botón)
+       ============================ -->
   <div class="form-container" id="form-container">
     <div class="input-wrapper">
-      <input type="date" id="date-input" placeholder="dd/mm/aaaa" />
-      <button id="calc-age-btn">Calcular</button>
+      <input type="date" id="date-input" />
+      <button id="calc-age-btn">Descubrir</button>
     </div>
 
     <div class="output-wrapper">
@@ -23,35 +34,95 @@
     </div>
   </div>
 
-  <!-- RESULTADO POST-CÁLCULO EN DOS COLUMNAS -->
+  <br />
+  
+  <!-- ============================
+       INSTRUCCIONES O TEXTO INFORMATIVO
+       ============================ -->
+  <h4>
+    <strong>
+      Ingresa tu fecha de nacimiento y descubre tu generación, su historia y cómo ha influido en el mundo.
+    </strong>
+  </h4>
 
+  <br />
+
+  <!-- ============================
+       RESULTADO - CONTENEDOR PRINCIPAL (Dos columnas)
+       ============================ -->
   <div class="container hidden" id="result-container">
 
-    <!-- IZQUIERDA -->
-
+    <!-- ----------------------------
+         PANEL IZQUIERDO (Datos y video)
+         ---------------------------- -->
     <div class="left-panel">
-      <div class="input-wrapper">
-      </div>
 
+      <!-- Input y botón para recalcular (insertados dinámicamente por JS) -->
+      <div class="input-wrapper"></div>
+
+      <!-- Mostrar resultado de edad calculada -->
       <div class="output-wrapper">
         <div><span id="res-days">-</span><p>Días</p></div>
         <div><span id="res-months">-</span><p>Meses</p></div>
         <div><span id="res-years">-</span><p>Años</p></div>
       </div>
 
+      <!-- Nombre y descripción de la generación -->
       <h3 id="generation-name">-</h3>
       <p id="generation-description">-</p>
-      <img id="generation-image" src="" alt="Imagen Generación" class="generation-img" />
+
+      <!-- Video y botón volver (insertados dinámicamente) -->
+      <div id="video-wrapper"></div>
+
+      <br />
+      <br />
+
+      <!-- Compartir generación (redes sociales con íconos) -->
+      <div>
+        <h2 class="share-title">📢 ¡Comparte tu generación!</h2>
+        <div class="social-buttons">
+          <a id="share-facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a id="share-twitter" target="_blank">
+            <i class="fab fa-twitter"></i> Twitter
+          </a>
+          <a id="share-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
 
-    <!-- DERECHA -->
-
+    <!-- ----------------------------
+         PANEL DERECHO (Imagen y contacto)
+         ---------------------------- -->
     <div id="right-panel" class="right-panel hidden-panel">
+
+      <!-- Imagen representativa de la generación -->
+      <img id="generation-image" src="" alt="Imagen Generación" class="generation-img" />
       <p id="generation-details">Detalles de la generación...</p>
-      <div id="video-wrapper"></div>
+
+      <!-- NUEVA SECCIÓN FINAL: Formulario de contacto -->
+      <div class="final-section" id="final-section" style="display: none;">
+        <h3>📬 ¿Deseas que te enviemos tu resultado por correo?</h3>
+        <form class="contact-form">
+          <input type="text" placeholder="Tu nombre" required />
+          <input type="email" placeholder="Tu correo electrónico" required />
+          <textarea placeholder="Mensaje opcional..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <!-- Sección compartir oculta (puede usarse para otros íconos u opciones) -->
+      <div id="share-section" class="hidden"></div>
     </div>
   </div>
 
+  <!-- ============================
+       SCRIPTS
+       ============================ -->
   <script src="script.js"></script>
 </body>
 </html>
+
